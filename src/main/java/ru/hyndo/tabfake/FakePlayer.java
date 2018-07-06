@@ -11,9 +11,9 @@ public class FakePlayer {
     private UUID uuid;
 
     public FakePlayer(String prefix, String name, String suffix) {
-        this.prefix = prefix;
-        this.name = name;
-        this.suffix = suffix;
+        this.prefix = ColorUtil.color(prefix);
+        this.name = ColorUtil.color(name);
+        this.suffix = ColorUtil.color(suffix);
         this.uuid = UUID.nameUUIDFromBytes(("OfflinePlayer:" + name).getBytes());
     }
 
