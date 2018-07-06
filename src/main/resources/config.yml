@@ -18,9 +18,9 @@ fakePlayers:
       suffix: AregSuffix
     gummiankaPlayer:
       name: gummianka
-      prefix: Кюнутый
+      prefix: prefix
       suffix: ""
     hyndoPlayer:
       name: hyndorik
-      prefix: Енотнутый
+      prefix: hyndoPref
       suffix: ""
