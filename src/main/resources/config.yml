@@ -1,0 +1,26 @@
+fakePlayers:
+  #How many fake players are added at once
+  minPlayersOnce: 1
+  #How many fake players are removed at once
+  maxPlayersOnce: 2
+  #time in how many milliseconds players will be added
+  #Time in milliseconds (1 sec == 1000 ms)
+  timeoutAdd: 1000
+  #time in how many milliseconds players will be removed, should be more than timeoutAdd
+  #Time in milliseconds (1 sec == 1000 ms)
+  timeoutRemove: 12000
+  #list of fake players
+  players:
+    #unique id, name doesn't matter
+    aregPlayer:
+      name: Areg
+      prefix: AregPrefix
+      suffix: AregSuffix
+    gummiankaPlayer:
+      name: gummianka
+      prefix: Кюнутый
+      suffix: ""
+    hyndoPlayer:
+      name: hyndorik
+      prefix: Енотнутый
+      suffix: ""

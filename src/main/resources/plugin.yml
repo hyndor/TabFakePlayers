@@ -1,0 +1,7 @@
+name: TabFakePlayers
+version: 1.0
+main: ru.hyndo.tabfake.TabFakePlayersPlugin
+author: [hyndo]
+depend: [ProtocolLib]
+commands:
+  testc:
