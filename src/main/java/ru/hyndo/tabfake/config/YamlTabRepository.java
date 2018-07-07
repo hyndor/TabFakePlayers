@@ -37,14 +37,11 @@ public class YamlTabRepository implements TabRepository {
     }
 
     private List<FakePlayer> parsePlayers(ConfigurationSection playersCfg) {
-        List<FakePlayer> source = new ArrayList<>();
-        for (String playerCfgKey : playersCfg.getKeys(false)) {
-            ConfigurationSection playerCfg = playersCfg.getConfigurationSection(playerCfgKey);
-            String prefix = playerCfg.getString("prefix");
-            String name = playerCfg.getString("name");
-            String suffix = playerCfg.getString("suffix");
-            source.add(new FakePlayer(prefix, name, suffix));
-        }
-        return source;
+        return playersCfg.getKeys(false).stream()
+                .map(playerCfgKey -> { 
+                    ConfigurationSection playerCfg = playersCfg.getConfigurationSection(playerCfgKey);
+                    return new FakePlayer(playerCfg.getString("prefix"), playerCfg.getString("name"), playerCfg.getString("suffix")); 
+                })
+                .collect(Collectors.toList());
     }
 }
